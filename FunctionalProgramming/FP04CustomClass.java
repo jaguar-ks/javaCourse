@@ -1,6 +1,7 @@
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 class Course {
     private String name;
@@ -86,8 +87,43 @@ public class FP04CustomClass {
         System.out.println(
             courses.stream()
             .sorted(comparingByStudentNumber)
-            .limit(3)
+            .skip(2)
+            .limit(2)
             .toList()
         );
+        
+        System.out.println(
+            courses.stream()
+            .collect(
+                Collectors.groupingBy(
+                    Course::getCategory,
+                    Collectors.counting()
+                )
+            )
+        );
+        
+        System.out.println(
+            courses.stream()
+            .collect(
+                Collectors.groupingBy(
+                    Course::getCategory,
+                    Collectors.maxBy(Comparator.comparing(Course::getReviewScore))
+                )
+            )
+        );
+        
+        System.out.println(
+            courses.stream()
+            .collect(
+                Collectors.groupingBy(
+                    Course::getCategory,
+                    Collectors.mapping(
+                        Course::getName,
+                        Collectors.toList()
+                    )
+                )
+            )
+        );
+        
     };
 };
