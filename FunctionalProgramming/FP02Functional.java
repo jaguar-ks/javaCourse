@@ -13,15 +13,16 @@ public class FP02Functional {
         System.out.println(name.stream()
             .map(n -> n.length())
             .collect(Collectors.toList()));
-    }
+        }
 
-    private static List<Integer> squarAllNumbers(List<Integer> numbers) {
+        private static List<Integer> squarAllNumbers(List<Integer> numbers) {
         return numbers.stream()
             .map(x -> x * x)
             .sorted()
             .collect(Collectors.toList());
-    }
-
+        }
+        
+    @SuppressWarnings("unused")
     private static int addListFunctional(List<Integer> numbers) {
         return numbers.stream()
             // .reduce(0, (a, b) -> a + b);
