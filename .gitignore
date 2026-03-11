@@ -1,0 +1,81 @@
+# -----------------------
+# Java
+# -----------------------
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+hs_err_pid*
+
+# -----------------------
+# Maven
+# -----------------------
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# -----------------------
+# Gradle
+# -----------------------
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local Gradle config
+gradle-app.setting
+
+# -----------------------
+# IntelliJ IDEA
+# -----------------------
+.idea/
+*.iml
+out/
+
+# -----------------------
+# Eclipse
+# -----------------------
+.project
+.classpath
+.settings/
+bin/
+tmp/
+
+# -----------------------
+# NetBeans
+# -----------------------
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbs
+.netbeans/
+*.nbattrs
+
+# -----------------------
+# VS Code
+# -----------------------
+.vscode/
+
+# -----------------------
+# OS Files
+# -----------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
