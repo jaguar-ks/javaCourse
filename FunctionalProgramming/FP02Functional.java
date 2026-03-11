@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 // import java.util.function.Function;
 
@@ -6,6 +7,10 @@ public class FP02Functional {
         List<Integer> numbers = List.of(1, 4, 2, 5, 3);
         int sum = addListFunctional(numbers);
         System.out.println(sum);
+        List<String> name = List.of("Fahd", "Amine", "Ksouss");
+        name.stream()
+            .sorted(Comparator.comparing(x -> x.length()))
+            .forEach(System.out::println);
     }
 
     private static int addListFunctional(List<Integer> numbers) {
